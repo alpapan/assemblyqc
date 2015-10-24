@@ -18,8 +18,8 @@ while (my $record=<IN>){
      next unless $record;
      my @lines = split("\n",$record);
      my $id = shift (@lines);
-	#gi|444439379|ref|N
-     if ($id=~/^gi\|(\d+)\|/){
+	#gi|444439379|ref|N not useful as GI doesn't exist
+     if ($id=~/^(\S+)/){
 	$hash_exist{$1}++;
      }
 }
@@ -33,7 +33,7 @@ while (my $record=<IN>){
      my @lines = split("\n",$record);
      my $id = shift (@lines);
 	#gi|444439379|ref|N
-     if ($id=~/^gi\|(\d+)\|/){
+     if ($id=~/^(\S+)/){
 	print ">".$record if !$hash_exist{$1};
      }
 }
