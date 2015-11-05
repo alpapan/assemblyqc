@@ -1,0 +1,5 @@
+
+*.dmp filter=lfs diff=lfs merge=lfs -text
+*.kdb filter=lfs diff=lfs merge=lfs -text
+*.idx filter=lfs diff=lfs merge=lfs -text
+*.bz2 filter=lfs diff=lfs merge=lfs -text
